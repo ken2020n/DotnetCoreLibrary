@@ -7,9 +7,7 @@ namespace WebApiBase.Extensions
     {
         public static string ToSha256(this string value)
         {
-            using var sha256Hash = SHA256.Create();
-
-            var bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(value));
+            var bytes = SHA256.Create().ComputeHash(Encoding.UTF8.GetBytes(value));
 
             var stringBuilder = new StringBuilder();
             foreach (var item in bytes)
