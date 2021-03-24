@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace WebApiBase.Models
 {
-    public abstract class RequestModel<T>
+    public class RequestModel<T>
     {
         public string ApiKey { get; set; }
 
